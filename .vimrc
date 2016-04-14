@@ -63,6 +63,11 @@ set wildmenu
 " Set command-line completion mode
 set wildmode=list:longest,full
 
+" Yank to clipboard
+if has("clipboard")
+    set clipboard=unnamed " copy to the system clipboard"
+endif
+
 " Highlight current line - allows you to track cursor position more easily
 set cursorline
 
