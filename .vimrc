@@ -25,6 +25,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
