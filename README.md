@@ -8,3 +8,6 @@
 
 ### Command-T needs compiling
 ```cd ~/.vim/bundle/command-t && rake make```
+
+### Bash completion installation
+```brew tap homebrew/completions && brew install bash-completion```
