@@ -199,6 +199,8 @@ nmap <leader>o :NERDTreeToggle<cr>
 "" Syntastic
 "------------------------------------------------------------------------------
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_javascript_checkers = ['eslint']
+
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go']  }
 
 set statusline+=%#warningmsg#
@@ -343,5 +345,14 @@ nmap <F9> :CommandT<CR>
 "" Vim-JSX
 "------------------------------------------------------------------------------
 let g:jsx_ext_required = 0
-let g:syntastic_javascript_checkers = ['eslint']
 
+" Override eslint with local version where necessary.
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+
+if matchstr(local_eslint, "^\/\\w") == ''
+  let local_eslint = getcwd() . "/" . local_eslint
+endif
+
+if executable(local_eslint)
+  let g:syntastic_javascript_eslint_exec = local_eslint
+endif
