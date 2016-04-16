@@ -11,3 +11,6 @@
 
 ### Bash completion installation
 ```brew tap homebrew/completions && brew install bash-completion```
+
+### Javascript setup
+```npm install -g eslint babel-eslint eslint-plugin-react```

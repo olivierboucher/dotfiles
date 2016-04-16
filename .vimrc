@@ -26,6 +26,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wincent/command-t'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -336,3 +337,10 @@ let g:tagbar_type_go = {
 " Command-T
 "------------------------------------------------------------------------------
 nmap <F9> :CommandT<CR>
+
+"------------------------------------------------------------------------------
+"" Vim-JSX
+"------------------------------------------------------------------------------
+let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
