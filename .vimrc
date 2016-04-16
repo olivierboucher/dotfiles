@@ -26,6 +26,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wincent/command-t'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
