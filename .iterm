@@ -46,8 +46,8 @@ function set_prefix {
     else
         echo "${UNDERLINE}+"
     fi
-
+    CONT
 }
-
+CLUSTER=$(kubectl config view -o jsonpath='{.current-context}')
 # set the line to be displayed
-PS1='${MAGENTA}\u${WHITE} in ${GREEN}\w${WHITE}${MAGENTA}`__git_ps1 " on %s"`${WHITE}\r\n$ '
+PS1='${MAGENTA}\u${WHITE} in ${GREEN}\w${WHITE}${MAGENTA}`__git_ps1 " on %s"`${WHITE} using ${LIME_YELLOW}${CLUSTER}${POWDER_BLUE}\r\n\$${WHITE} '
